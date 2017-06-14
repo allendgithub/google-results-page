@@ -1,11 +1,16 @@
-html, body {
-	margin: auto; /*STRETCHES PAGE ALL THE WAY ACROSS */
-	overflow-x: hidden; 
-	overflow-y: hidden; /*HIDES ANY ADDITIONAL 
-	SCROLLING STUFF ON Y AXIS SO BOTTOM DIV CAN BE AS LARGE AS 
+html {
+	position: relative;
+	overflow-x: hidden;   
+ /*HIDES ANY ADDITIONAL 
+	SCROLLING STUFF ON X AXIS SO BOTTOM DIV CAN BE AS LARGE AS 
 	YOU WANT WITHOUT NEED TO SCROLL */
 	
+ 	min-height: 100%;
+ 
+
 	}
+
+body {margin: 0 0 800px; /*MAKES PAGE 800px total (I think) */}
 
 #tr {float: right;}
 
@@ -20,22 +25,36 @@ html, body {
 	
 }
 
+#toplinks a:link {
+	font-family: Arial;
+   	font-size: 12px;
+   	color: #6F78A5;
+}
+
+#bottom a:link {
+	font-family: Arial;
+   	font-size: 12px;
+   	color: #6F78A5;
+   	min-height: 100%;
+
+}
+
 #Tleft {
-		position: fixed;
+	position: absolute;
 	float: left;
 	margin-top: -53px;
 	margin-left: 190px;
 }
 
 #Tright {
-	position: fixed;
+	position: absolute;
 	float: left;
 	margin-top: -53px;
 	margin-left: 640px;
 }
 
 #All a:link {
-	position: fixed;
+	position: absolute;
 	float: left;
    	padding: 14px;
 	margin-top: -46px;
@@ -45,8 +64,7 @@ html, body {
    	font-weight: bold;
    	color: rgb(66,135,245);
    	border-bottom: 3px solid rgb(66,135,245); 
- 
- 	
+  	
 	}
 
 #All a:visited {color: rgb(66,135,245);} 
@@ -54,9 +72,74 @@ html, body {
 
 li#All a:visited { 
 	color: rgb(66,135,245);
-	;
+
 	
 }
+
+/* SEARCH RESULTS */
+
+#brag {
+	position: absolute;
+	float: left;
+	font-family: Arial;
+   	font-size: 12px;
+   	color: #6F78A5;
+	margin-left: 170px;
+}
+
+#results {
+	
+	position: absolute;
+	list-style-type: none; 
+	margin-left: 25px;	
+	margin-top: 35px;
+	float: left;
+	font-family: Arial;
+   	font-size: 12px;
+	margin-left: 170px;
+
+
+}
+
+
+
+.head a:link {
+
+	clear: both;
+	text-decoration: none;
+	font-size: 18px;
+	margin-top: auto;
+}
+
+.head a:hover {text-decoration: underline;}
+
+.slinks {
+	position: relative;
+	clear: both;
+	color: green;
+	list-style-type: none;
+	text-decoration: none;
+	font-size: 14px;
+
+
+	}
+
+
+
+.desc {
+	position: relative;
+	clear: both;
+	list-style-type: none;
+	margin-top: auto;
+	font-size: 13px;
+	color: #6F78A5;
+
+	
+}
+
+
+
+
 	
 /*Google logo */
 #logo {
@@ -67,7 +150,7 @@ li#All a:visited {
 
 /* Search Bar */
 #bar {
-	position: fixed;
+	position: absolute;
 	clear: both;
 	margin-bottom: 30px;
 	margin-top: 20px;
@@ -84,14 +167,14 @@ li#All a:visited {
 
 /* Mic Image */
 #mic {
-	position: fixed;
+	position: absolute;
 	margin-left: 705px;
 	margin-top: 14px;
 }
 
 /* Mag Glass Image */
 #glass {
-	position: fixed;
+	position: absolute;
 	margin-left: 744px;
 	margin-top: 14px;
 }
@@ -144,50 +227,58 @@ li#All a:visited {
 	background: -webkit-linear-gradient(left, #f7f7f7 0%, #F6F6F6 100%); 
 }
 
-#bottom {	
- margin-top: 165px;
- background-color: #F2F2F2;
- height: 50px;
- border: 1px solid #E4E4E4;
- overflow: hidden;
+#botimg {
+	position: absolute;
+	margin: -100px 0px 0px 310px;
 
 
 
+}
+
+#bottom {	/** Sticky Footer sort of **/
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 85px;
+	background-color: #F2F2F2;
+	border: 1px solid #E4E4E4;
+	
   }
 
+#Bleft {
+	margin: 55px 0px 0px 150px;
+}
+
 #Bleft li {
-	float: left;
+	position: relative;
 	list-style-type: none; 	
 	display: inline;
     padding: 15px;
-    margin: -5px -5px 0px 10px;
-
-
-}
-
-#Bright li {
-	float: right;
-	list-style-type: none; 	
-	display: inline;
-    padding: 15px;
-    margin: -5px 10px 0px -10px;;
-
 }
 
 
 
 
-a {
+
+#toplinks a:link {text-decoration: none;}
+
+#toplinks a:hover {color: black;}
+
+#bottom a:link {
+	text-decoration: none;
 	font-family: Arial;
    	font-size: 12px;
    	color: #6F78A5;
-   	}
+}
 
-a:link {text-decoration: none;}
+#bottom a:visited {
+	text-decoration: none;
+	font-family: Arial;
+   	font-size: 12px;
+   	color: #6F78A5;
+}
 
-
-
-a:hover {color: black;}
+#bottom a:hover {color: black;}
 
 
 /* Removes X from search bar */
